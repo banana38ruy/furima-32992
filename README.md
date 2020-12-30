@@ -15,6 +15,7 @@
 
 - has_many :items
 - has_many :deliveries
+- has_one  :item_delivery
 
 ## itemsテーブル
 

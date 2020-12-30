@@ -47,7 +47,7 @@ encrypted_password
 
 ### Association
 
-- belongs_to :item
+- has_one :item
 - belongs_to :delivery
 
 ## deliveryテーブル

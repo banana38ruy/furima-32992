@@ -64,7 +64,7 @@ encrypted_password
 | shipping_area       | string     | null: false |
 | shipping_fee_burden | string     | null: false |
 | days_to_ship        | string     | null: false |
-| phone_number        | integer    | null: false |
+| phone_number        | string     | null: false |
 
 ### Association
 

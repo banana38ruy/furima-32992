@@ -22,8 +22,8 @@ encrypted_password
 | Column           | Type       | Options           |
 | -----------------| ---------- | ------------------|
 | item             | references | foreign_key: true |
-| item_name        | text       | null: false       |
-| item_expranation | text       | null: false       |
+| name             | text       | null: false       |
+| expranation      | text       | null: false       |
 | category         | string     | null: false       |
 | price            | integer    | null: false       |
 

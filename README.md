@@ -19,13 +19,16 @@ encrypted_password
 
 ## itemsテーブル
 
-| Column           | Type       | Options           |
-| -----------------| ---------- | ------------------|
-| item             | references | foreign_key: true |
-| name             | text       | null: false       |
-| expranation      | text       | null: false       |
-| category         | string     | null: false       |
-| price            | integer    | null: false       |
+| Column                   | Type       | Options           |
+| -------------------------| ---------- | ------------------|
+| item                     | references | foreign_key: true |
+| name                     | text       | null: false       |
+| expranation              | text       | null: false       |
+| category                 | string     | null: false       |
+| quality_id               | integer    | null: false       |
+| shipping_fee_burden_id   | integer    | null: false       |
+| shipping_area_id         | integer    | null: false       |
+| Shipping_id              | integer    | null: false       |
 
 ### Association
 

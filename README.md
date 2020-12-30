@@ -26,7 +26,7 @@
 | price                    | integer    | null: false       |
 | quality_id               | integer    | null: false       |
 | shipping_fee_burden_id   | integer    | null: false       |
-| shipping_area_id         | integer    | null: false       |
+| prefectures_id           | integer    | null: false       |
 | Shipping_id              | integer    | null: false       |
 | user                     | references | foreign_key: true |
 

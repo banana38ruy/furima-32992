@@ -61,9 +61,6 @@ encrypted_password
 | address             | string     | null: false |
 | quality             | string     | null: false |
 | building_name       | string     |             |
-| shipping_area       | string     | null: false |
-| shipping_fee_burden | string     | null: false |
-| days_to_ship        | string     | null: false |
 | phone_number        | string     | null: false |
 
 ### Association

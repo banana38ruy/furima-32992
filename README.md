@@ -25,7 +25,7 @@ encrypted_password
 | -------------------------| ---------- | ------------------|
 | name                     | string     | null: false       |
 | expranation              | text       | null: false       |
-| category                 | string     | null: false       |
+| item_id                  | integer    | null: false       |
 | price                    | integer    | null: false       |
 | quality_id               | integer    | null: false       |
 | shipping_fee_burden_id   | integer    | null: false       |

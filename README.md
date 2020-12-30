@@ -13,8 +13,8 @@
 
 ### Association
 
-- has_many :items
-- has_one  :item_delivery
+- has_many  :items
+- has_many  :item_delivery
 
 ## itemsテーブル
 
@@ -63,5 +63,5 @@
 
 ### Association
 
-- has_one :item_delivery
+- belongs :item_delivery
 

@@ -23,7 +23,7 @@ encrypted_password
 
 | Column                   | Type       | Options           |
 | -------------------------| ---------- | ------------------|
-| name                     | text       | null: false       |
+| name                     | string     | null: false       |
 | expranation              | text       | null: false       |
 | category                 | string     | null: false       |
 | price                    | integer    | null: false       |

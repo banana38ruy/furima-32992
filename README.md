@@ -47,7 +47,7 @@
 
 - belongs_to :user
 - belongs_to :item
-- belongs_to :delivery
+- has_one :delivery
 
 ## deliveryテーブル
 
@@ -60,6 +60,7 @@
 | quality             | string     | null: false       |
 | building_name       | string     |                   |
 | phone_number        | string     | null: false       |
+| item                | references | foreign_key: true |
 
 ### Association
 

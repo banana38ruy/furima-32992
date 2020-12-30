@@ -35,7 +35,7 @@ encrypted_password
 
 ### Association
 
-- has_many :item_deliveries
+- has_one :item_delivery
 - has_many :delivery, through: :item_deliveries
 - belongs_to :user
 

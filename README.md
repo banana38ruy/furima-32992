@@ -59,7 +59,7 @@
 | quality             | string     | null: false       |
 | building_name       | string     |                   |
 | phone_number        | string     | null: false       |
-| item                | references | foreign_key: true |
+| item_delivery       | references | foreign_key: true |
 
 ### Association
 

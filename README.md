@@ -42,8 +42,8 @@ encrypted_password
 
 | Column   | Type       | Options           |
 | -------- | ---------- | ----------------- |
-| item     | references | foreign_key: true |
-| delivery | references | foreign_key: true |
+| user     | references | foreign_key: true |
+
 
 ### Association
 

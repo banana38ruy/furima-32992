@@ -1,20 +1,19 @@
 ## usersテーブル
 
-| Column             | Type       | Options     |
-| ------------------ | ---------- | ------------|       
-| encrypted_password | string     | null: false |
-| email              | string     | null: false |
-| nickname           | string     | null: false |
-| first_name         | string     | null: false |
-| last_name          | string     | null: false |
-| first_name_kana    | string     | null: false |
-| last_name_lana     | string     | null: false |
-| birthday           | date       | null: false |
+| Column             | Type       | Options                  |
+| ------------------ | ---------- | ------------------------ |       
+| encrypted_password | string     | null: false              |
+| email              | string     | null: false, unique:true |
+| nickname           | string     | null: false              |
+| first_name         | string     | null: false              |
+| last_name          | string     | null: false              |
+| first_name_kana    | string     | null: false              |
+| last_name_kana     | string     | null: false              |
+| birthday           | date       | null: false              |
 
 ### Association
 
 - has_many :items
-- has_many :deliveries
 - has_one  :item_delivery
 
 ## itemsテーブル

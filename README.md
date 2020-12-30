@@ -48,7 +48,7 @@
 - belongs_to :item
 - has_one :delivery
 
-## deliveryテーブル
+## deliveriesテーブル
 
 | Column              | Type       | Options           |
 | --------------------| ---------- | ----------------- |

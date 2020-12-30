@@ -14,7 +14,7 @@
 ### Association
 
 - has_many  :items
-- has_many  :item_delivery
+- has_many  :item_deliveries
 
 ## itemsテーブル
 

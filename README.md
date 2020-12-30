@@ -1,7 +1,7 @@
 ## usersテーブル
 
 | Column             | Type       | Options     |
-| ------------------ | ---------- | ----------- |
+| ------------------ | ---------- | ------------|       
 | encrypted_password | string     | null: false |
 | email              | string     | null: false |
 | nickname           | string     | null: false |
@@ -10,6 +10,7 @@
 | first_name_kana    | string     | null: false |
 | last_name_lana     | string     | null: false |
 | birthday           | date       | null: false |
+
 
 encrypted_password 
 
@@ -22,7 +23,6 @@ encrypted_password
 
 | Column                   | Type       | Options           |
 | -------------------------| ---------- | ------------------|
-| item                     | references | foreign_key: true |
 | name                     | text       | null: false       |
 | expranation              | text       | null: false       |
 | category                 | string     | null: false       |
@@ -31,6 +31,7 @@ encrypted_password
 | shipping_fee_burden_id   | integer    | null: false       |
 | shipping_area_id         | integer    | null: false       |
 | Shipping_id              | integer    | null: false       |
+| user                     | references | foreign_key: true |
 
 ### Association
 

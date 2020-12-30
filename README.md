@@ -1,13 +1,16 @@
 ## usersテーブル
 
-| Column           | Type       | Options     |
-| ---------------- | ---------- | ----------- |
-| nickname         | string     | null: false |
-| first_name       | string     | null: false |
-| last_name        | string     | null: false |
-| first_name_kana  | string     | null: false |
-| last_name_lana   | string     | null: false |
-| birthday         | datetime   | null: false |
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ----------- |
+| encrypted_password | string     | null: false |
+| nickname           | string     | null: false |
+| first_name         | string     | null: false |
+| last_name          | string     | null: false |
+| first_name_kana    | string     | null: false |
+| last_name_lana     | string     | null: false |
+| birthday           | datetime   | null: false |
+
+encrypted_password 
 
 ### Association
 
@@ -16,12 +19,13 @@
 
 ## itemsテーブル
 
-| Column           | Type       | Options     |
-| -----------------| ---------- | ------------|
-| item_name        | text       | null: false |
-| item_expranation | text       | null: false |
-| category         | string     | null: false |
-| price            | integer    | null: false |
+| Column           | Type       | Options           |
+| -----------------| ---------- | ------------------|
+| item             | references | foreign_key: true |
+| item_name        | text       | null: false       |
+| item_expranation | text       | null: false       |
+| category         | string     | null: false       |
+| price            | integer    | null: false       |
 
 ### Association
 

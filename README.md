@@ -25,6 +25,7 @@ encrypted_password
 | name                     | text       | null: false       |
 | expranation              | text       | null: false       |
 | category                 | string     | null: false       |
+| price                    | integer    | null: false       |
 | quality_id               | integer    | null: false       |
 | shipping_fee_burden_id   | integer    | null: false       |
 | shipping_area_id         | integer    | null: false       |
@@ -68,18 +69,3 @@ encrypted_password
 - has_many :item_deliveries
 - has_many :item, through: :item_deliveries
 - belongs_to :user
-- has_one :purchase
-
-
-## purchaseテーブル
-
-| Column              | Type       | Options     |
-| --------------------| ---------- | ----------- |
-| credit_number       | integer    | null: false |
-| expiration_date     | integer    | null: false |
-| security_code       | integer    | null: false |
-
-
-### Association
-
-- belongs_to :delivery

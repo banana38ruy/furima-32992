@@ -10,9 +10,6 @@
 | last_name_lana     | string     | null: false |
 | birthday           | date       | null: false |
 
-
-encrypted_password 
-
 ### Association
 
 - has_many :items

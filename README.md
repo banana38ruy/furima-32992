@@ -1,7 +1,7 @@
 ## usersテーブル
 
 | Column             | Type       | Options                  |
-| ------------------ | ---------- | ------------------------ |       
+| ------------------ | ---------- | ------------------------ |      
 | encrypted_password | string     | null: false              |
 | email              | string     | null: false, unique:true |
 | nickname           | string     | null: false              |
@@ -18,17 +18,17 @@
 
 ## itemsテーブル
 
-| Column                   | Type       | Options           |
-| -------------------------| ---------- | ------------------|
-| name                     | string     | null: false       |
-| expranation              | text       | null: false       |
-| category_id              | integer    | null: false       |
-| price                    | integer    | null: false       |
-| quality_id               | integer    | null: false       |
-| shipping_fee_burden_id   | integer    | null: false       |
-| prefectures_id           | integer    | null: false       |
-| Shipping_id              | integer    | null: false       |
-| user                     | references | foreign_key: true |
+| Column             | Type       | Options           |
+| -------------------| ---------- | ------------------|
+| name               | string     | null: false       |
+| expranation        | text       | null: false       |
+| category_id        | integer    | null: false       |
+| price              | integer    | null: false       |
+| quality_id         | integer    | null: false       |
+| delivery_burden_id | integer    | null: false       |
+| prefectures_id     | integer    | null: false       |
+| shipping_id        | integer    | null: false       |
+| user               | references | foreign_key: true |
 
 ### Association
 

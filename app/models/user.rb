@@ -19,6 +19,7 @@ class User < ApplicationRecord
            end
 
          validates :birthday, presence: true
+         validates :email,:password,:password_confirmation, presence: true
 
         end
 

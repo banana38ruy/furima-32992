@@ -140,6 +140,41 @@ end
         expect(@user.errors.full_messages).to include("Birthday can't be blank")
       end
     end
+  
+    describe 'ログイン/ユーザー情報' do
+      context 'ログインできる時' do
+        it '登録したemailとpasswordを記入できてあればログインできる' do
+            expect(@user).to be_valid
+        end
+      end
+      context 'ログインできないとき' do
+        it 'emailが空ではログインできない' do
+          @user.email = nil
+          @user.valid?
+          expect(@user.errors.full_messages).to include("Email can't be blank")
+        end
+        it 'passwordが空ではログインできない' do
+          @user.password = nil
+          @user.valid?
+          expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+        end
+        it '登録したemailに対してパスワードが違えばログインできない' do
+          @user.password = "123abc"
+          @user.valid?
+          expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+        end
+      end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   end
 end
-
+end

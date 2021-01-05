@@ -29,8 +29,8 @@ end
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
       it 'passwordが全角では登録できない' do
-        @user.password = "２８２８OYAZI"
-        @user.password_confirmation = "２８２８OYAZI"
+        @user.password = "２８２８ＯＹＡＺＩ"
+        @user.password_confirmation = "２８２８ＯＹＡＺＩ"
         @user.valid?
         expect(@user.errors.full_messages).to include("Password には英字と数字の両方を含めて設定してください")
       end

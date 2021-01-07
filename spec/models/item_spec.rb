@@ -6,14 +6,14 @@ RSpec.describe Item, type: :model do
     @item = FactoryBot.build(:item)
 end
 
-  describe '商品登録機能の確認' do
-    context '商品登録できる時' do
-      it 'category,quality,delivery_burden,prefecture,shippingの選択肢を選択することと
+   describe '商品登録機能の確認' do
+     context '商品登録できる時' do
+       it 'category,quality,delivery_burden,prefecture,shippingの選択肢を選択することと
           name,expranation,priceを記入して画像が一枚添付できてあれば登録できる' do
           expect(@item).to be_valid
-      end
-    end
-    context '商品登録できないとき' do
+       end
+     end
+     context '商品登録できないとき' do
       it '画像が空では登録できない' do
         @item.image = nil
         @item.valid?
@@ -124,24 +124,9 @@ end
         @item.valid?
         expect(@item.errors.full_messages).to include("Price 上記の販売価格を半角数字で入力してください")
       end
-      
-      
-    
-    
-      end
-    end
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-end
+     end
+   end   
   end
+end
 
 

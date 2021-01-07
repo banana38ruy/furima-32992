@@ -85,12 +85,12 @@ end
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
       it '販売価格が300円より下の値段では登録できない' do
-        @item.price = "299"
+        @item.price = 299
         @item.valid?
         expect(@item.errors.full_messages).to include("Price 上記の販売価格を半角数字で入力してください")
       end
       it '販売価格が9999999円より上の値段では登録できない' do
-        @item.price = "10000000"
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include("Price 上記の販売価格を半角数字で入力してください")
       end

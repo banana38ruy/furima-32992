@@ -9,6 +9,7 @@ class Item < ApplicationRecord
   
   
   belongs_to :user
+  has_one :item_delivery
   has_one_attached :image
 
  

@@ -1,9 +1,9 @@
 FactoryBot.define do
-  factory :delivery do
+  factory :user_delivery do
     postal_code                {"390-0843"}
     prefecture_id              {2}
     municipalities             {"朝日村"}
     address                    {"3丁目6−59"}                     
-    phone_number               {'09077077457'}
+    phone_number               {"09077077457"}
   end
 end

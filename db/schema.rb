@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_10_024107) do
+ActiveRecord::Schema.define(version: 2021_01_10_014435) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -40,10 +40,10 @@ ActiveRecord::Schema.define(version: 2021_01_10_024107) do
     t.string "address", null: false
     t.string "building_name"
     t.string "phone_number", null: false
-    t.bigint "user_id"
+    t.bigint "item_delivery_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_deliveries_on_user_id"
+    t.index ["item_delivery_id"], name: "index_deliveries_on_item_delivery_id"
   end
 
   create_table "item_deliveries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 2021_01_10_024107) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "deliveries", "users"
+  add_foreign_key "deliveries", "item_deliveries"
   add_foreign_key "item_deliveries", "items"
   add_foreign_key "item_deliveries", "users"
   add_foreign_key "items", "users"

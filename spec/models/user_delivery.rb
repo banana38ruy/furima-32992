@@ -12,6 +12,10 @@ end
           prefecture_idの選択肢を選択することとpriceとtokenがあれば保存ができること' do 
           expect(@user_delivery).to be_valid
        end
+       it '建物名の入力が空でも購入ができる' do
+        @user_delivery.building_name = nil
+        expect(@user_delivery).to be_valid
+       end
      end
      context '商品購入ができないとき' do
       it 'tokenが空では購入できない' do
@@ -59,8 +63,7 @@ end
         @user_delivery.valid?
         expect(@user_delivery.errors.full_messages).to include("Prefecture Select")
       end
-      it '市町村の入力が空では購入できない' do
-      end
+      
        
      end
    end   

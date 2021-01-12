@@ -62,9 +62,7 @@ end
         @user_delivery.prefecture_id = 1
         @user_delivery.valid?
         expect(@user_delivery.errors.full_messages).to include("Prefecture Select")
-      end
-      
-       
+      end  
      end
    end   
   end

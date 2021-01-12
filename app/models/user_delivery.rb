@@ -1,7 +1,7 @@
 class UserDelivery
   
   include ActiveModel::Model
-  attr_accessor :postal_code, :prefecture_id, :municipalities, :address, :building_name, :phone_number, :price, :user_id, :item_id, :item_delivery_id, :token
+  attr_accessor :postal_code, :prefecture_id, :municipalities, :address, :building_name, :phone_number, :price, :user_id, :item_id, :token
   
   with_options presence: true do
      validates :municipalities
@@ -9,6 +9,9 @@ class UserDelivery
      validates :phone_number, length: { maximum: 11 }
      validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: 'Postal code Input correctly' }
      validates :token
+     validates :item_id
+     validates :user_id
+
    end
 
    validates :prefecture_id, numericality: { other_than: 1, message: 'Select' } 

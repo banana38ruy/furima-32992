@@ -4,12 +4,14 @@ RSpec.describe UserDelivery, type: :model do
   describe '#create' do
    before do
     @user_delivery = FactoryBot.build(:user_delivery)
+    @item = FactoryBot.build(:item)
+    @user = FactoryBot.build(:user)
 end
 
    describe '商品購入機能の確認' do
      context '商品購入ができる時' do
        it 'postal_code,municipalities,address,phone_numberを記述すること
-          prefecture_idの選択肢を選択することとtokenがあれば保存ができること' do 
+          prefecture_idの選択肢を選択することとtokenとuser_idとitem_idがあれば保存ができること' do 
           expect(@user_delivery).to be_valid
        end
        it '建物名の入力が空でも購入ができる' do
@@ -62,7 +64,17 @@ end
         @user_delivery.prefecture_id = 1
         @user_delivery.valid?
         expect(@user_delivery.errors.full_messages).to include("Prefecture Select")
-      end  
+      end
+        it 'user_idが空では購入できない' do
+          @user_delivery.user_id = nil
+          @user_delivery.valid?
+          expect(@user_delivery.errors.full_messages).to include("User can't be blank")
+        end
+        it 'item_idが空では購入できない' do
+          @user_delivery.item_id = nil
+          @user_delivery.valid?
+          expect(@user_delivery.errors.full_messages).to include("Item can't be blank")
+        end
      end
    end   
   end

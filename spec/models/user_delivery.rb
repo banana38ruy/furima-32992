@@ -9,7 +9,7 @@ end
    describe '商品購入機能の確認' do
      context '商品購入ができる時' do
        it 'postal_code,municipalities,address,phone_numberを記述すること
-          prefecture_idの選択肢を選択することとpriceとtokenがあれば保存ができること' do 
+          prefecture_idの選択肢を選択することとtokenがあれば保存ができること' do 
           expect(@user_delivery).to be_valid
        end
        it '建物名の入力が空でも購入ができる' do

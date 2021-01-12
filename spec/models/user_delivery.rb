@@ -9,11 +9,16 @@ end
    describe '商品購入機能の確認' do
      context '商品購入ができる時' do
        it 'postal_code,municipalities,address,phone_numberを記述すること
-          prefecture_idの選択肢を選択することと' do 
+          prefecture_idの選択肢を選択することとpriceとtokenがあれば保存ができること' do 
           expect(@user_delivery).to be_valid
        end
      end
      context '商品購入ができないとき' do
+      it 'tokenが空では購入できない' do
+        @user_delivery.token = nil
+        @user_delivery.valid?
+        expect(@user_delivery.errors.full_messages).to include("Token can't be blank")
+      end
       it '郵便番号の入力が空では購入できない' do
         @user_delivery.postal_code = nil
         @user_delivery.valid?

@@ -1,7 +1,7 @@
 class UserDelivery
   
   include ActiveModel::Model
-  attr_accessor :postal_code, :prefecture_id, :municipalities, :address, :building_name, :phone_number, :price, :user_id, :item_id, :token
+  attr_accessor :postal_code, :prefecture_id, :municipalities, :address, :building_name, :phone_number, :price, :user_id, :item_id, :token, 
   
   with_options presence: true do
      validates :municipalities
@@ -18,7 +18,7 @@ class UserDelivery
    validates :phone_number, numericality: { only_integer: true, message: 'Input only number' }
    
   def save
-    ItemDelivery.create(user_id: user_id, item_id: item_id,)
-    Delivery.create(postal_code: postal_code, municipalities: municipalities, address: address, building_name: building_name, phone_number: phone_number, item_delivery_id: item_delivery_id)
+    item_delivery = ItemDelivery.create(user_id: user_id, item_id: item_id)
+    Delivery.create(postal_code: postal_code, prefecture_id: prefecture_id, municipalities: municipalities, address: address, building_name: building_name, phone_number: phone_number, item_delivery_id: item_delivery.id)
   end
 end

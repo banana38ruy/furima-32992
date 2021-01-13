@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
     #   redirect_to root_path
     # else
       @item.destroy
-      redirect_to root_path
+      # redirect_to root_path
     # end
   end
    

@@ -20,12 +20,12 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    # unless current_user.id == @item.user.id && @item.item_delivery.blank?
-    #   redirect_to root_path
-    # else
+    unless current_user.id == @item.user.id && @item.item_delivery.blank?
+      redirect_to root_path
+    else
       @item.destroy
-      # redirect_to root_path
-    # end
+     redirect_to root_path
+    end
   end
    
 
